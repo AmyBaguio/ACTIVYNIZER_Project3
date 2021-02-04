@@ -1,7 +1,17 @@
 import React, {useState}from "react";
-import { Card, ListGroup } from 'react-bootstrap';
+import { Card, Container, ListGroup} from 'react-bootstrap';
+
 // import API from "../utils/API";
 
+const styles = {
+  dashBoardStyle: { 
+    color: 'blue',
+    backgroundColor: 'skyblue',
+    fontFamily: 'Arial',
+    textAlign: 'center',
+    
+  }
+};
 
 function Dashboard() { 
   const [calendarState, setDeveloperState] = useState(
@@ -27,30 +37,29 @@ function Dashboard() {
   }
 ]);
     return (
-     <div>
-        
+     <Container fluid style={styles.dashBoardStyle} className="Dashboard">
+       
+     {/* <img src={image} fluid alt="pinkBackground" className="absolute-cover w-full h-full"/>    */}
+     
       <h1>Dashboard</h1>
-
-      <Card style={{ width: '18rem' }}>
+      <Card border="primary" style={{ width: '30rem' }}>
       {calendarState.map(item => (
-       <ListGroup variant="flush">
+       <ListGroup variant="primary">
        <ListGroup.Item>
          Todays Event: {item.happeningToday} 
-       </ListGroup.Item> 
-       
+       </ListGroup.Item>   
        <ListGroup.Item>
         Date: {item.date} 
        </ListGroup.Item>
        <ListGroup.Item>
          Time: {item.time}
          </ListGroup.Item>
-     </ListGroup> 
-        
+      </ListGroup> 
       ))}
-  
-</Card>
+      </Card>
+
+</Container>  
       
-      </div>
     );
     }
   

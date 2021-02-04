@@ -1,23 +1,33 @@
 import React from "react";
-import { Container, Navbar, Nav} from 'react-bootstrap';
+import "../styles/Navbar.css";
+import { Navbar, Nav, Container,} from 'react-bootstrap';
 
 const styles = {
   navbarStyle: {
-    background: "green",
-    justifyContent: "flex-end"
+    background: "blue",
+    padding: "2rem",
+    fontFamily: "Impact",
+    fontSize: "1rem",
+    
   }
 };
 function MyNavbar() {
     return (
-      <Navbar bg="dark" variant="dark">
-      <Navbar.Brand href="#home">ActivyNizer</Navbar.Brand>
-      <Nav className="mr-auto">
+  <Container fluid style={styles.navbarStyle} className="MainNav">    
+  <Navbar collapseOnSelect expand="lg"> 
+  <Navbar.Brand href="/dashboard">A c t i v y N i z e r</Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="mr-auto">
       <Nav.Link href="/">Home</Nav.Link>
       <Nav.Link href="/dashboard">Dashboard</Nav.Link>
       <Nav.Link href="/calendar">Calendar</Nav.Link>
       </Nav>
-    
-  </Navbar>
+    <Nav> 
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+</Container> 
     );
   }
   
