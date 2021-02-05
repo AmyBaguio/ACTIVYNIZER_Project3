@@ -1,23 +1,24 @@
 import React from "react";
 
 const styles = {
-    footerStyle: { 
-      textAlign: 'center',
-      marginBottom: '0',
-      bottom: '0',
-      position: 'fixed',
-      width: '100%',
-    }
-  };
+  footerStyle: {
+    textAlign: "center",
+    marginBottom: "0",
+    bottom: "0",
+    width: "100%",
+    clear: "both",
+    position: "fixed"
+  },
+};
 
 function Footer() {
-    return (
-        <div style={styles.footerStyle} className="footer">
-    <div class="alert alert-primary" role="alert" >
-        &copy; A  C  T  I  V  Y  N  I  Z  E  R  
+  return (
+    <div style={styles.footerStyle} className="footer">
+      <div class="alert alert-primary" role="alert">
+        &copy; *ACTIVYNIZER* Organising Family Events
+      </div>
     </div>
-</div>
-    );
+  );
 }
 
 export default Footer;

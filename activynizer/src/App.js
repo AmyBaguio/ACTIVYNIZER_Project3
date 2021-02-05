@@ -2,23 +2,27 @@ import React from 'react';
 import MyNavbar from "./components/Navbar";
 import Dashboard from "./components/Dashboard";
 import Footer from "./components/Footer";
+import Home from './components/Home';
+import Calendar from './components/Calendar';
 import './App.css';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>  
           <MyNavbar />
-          <Switch>
-  <Route exact path={"/"}>
-    <div>TODO: Home Page</div>
-  </Route>
-  <Route exact path={"/dashboard"}>
-    <Dashboard />
-  </Route>
-  <Redirect to={"/dashboard"}/>
-</Switch>
-<Footer/>
+    <Switch>
+    <Route exact path={"/"}>
+          < Home />
+    </Route>
+    <Route exact path={"/dashboard"}>
+          <Dashboard />
+    </Route>
+    <Route path={"/calendar"}/>
+          
+    </Switch>
+          <Calendar/>
+          <Footer/>
     </BrowserRouter>      
   );
 }
