@@ -6,20 +6,19 @@ import { Card, Container, ListGroup } from "react-bootstrap";
 const styles = {
   dashBoardStyle: {
     color: "blue",
-    backgroundColor: "skyblue",
+    backgroundColor: "cyan",
     fontFamily: "Impact",
     textAlign: "center",
-    alignItems: "center",
-    flexDirection: "column",
+   
   },
+  event: {
+    fontFamily: "Arial",
+    justifyContent: "Center",
+  
+  }
 };
 
-const eventList = {
-  event: {
-    fontFamily: "Impact",
-    justifyContent: "Center",
-  },
-};
+
 
 function Dashboard() {
   const [calendarState, setDeveloperState] = useState([
@@ -46,20 +45,21 @@ function Dashboard() {
   ]);
   return (
     <Container fluid style={styles.dashBoardStyle} className="Dashboard">
+      <div>
       <h1>Dashboard</h1>
-      <Card border="primary" style={{ width: "30rem" }}>
-        {calendarState.map((item) => (
-          <ListGroup
-            style={eventList.event}
-            className="Event"
-            variant="primary"
-          >
+      </div>
+      <div>
+      <Card  border="primary" style={{ width: "30rem", display: "inline"}}>  
+        {calendarState.map((item) => (  
+          <ListGroup style={styles.event} variant="secondary"> 
             <ListGroup.Item>Todays Event: {item.happeningToday}</ListGroup.Item>
             <ListGroup.Item>Date: {item.date}</ListGroup.Item>
             <ListGroup.Item>Time: {item.time}</ListGroup.Item>
           </ListGroup>
         ))}
       </Card>
+      </div>
+      
     </Container>
   );
 }

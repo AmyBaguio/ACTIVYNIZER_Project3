@@ -1,20 +1,40 @@
-import React from "react";
-import { Container} from "react-bootstrap";
 
-const styles = {
-    calendar: {
-        textAlign: "center",
-        backgroundColor: "skyblue",
-        font: "Impact"
-    },
-}
-function Calendar() {
-    return (
-        <Container fluid style={styles.calendar} className="calendar">
-            <h1 >CALENDAR</h1>
-        </Container>
+import React, { useState } from "react";
+import { Container } from "react-bootstrap";
+import Calendar from "react-calendar";
+import 'react-calendar/dist/Calendar.css';
+
+
+const ReactCalendar = () => {
+  const [date, setDate] = useState(new Date());
+
+  const onChange = (date) => {
+    setDate(date);
+  };
+
+  return (
+    // <Container fluid style={{ backgroundColor: "cyan" }}>
+     
+    //     style={{
+    //       lineHeight: "150px",
+    //       textAlign: "center",
+    //       backgroundColor: "skyBlue",
+    //       fontFamily: "Arial",
+    //       fontSize: "20px",
+    //       margin: "70px",
+    //     }}
+      
+        <Container flluid style={{
+          
+          width: "100%",
+          height: "100%",
+          display: "inline",
         
-    );
-}
-
-export default Calendar;
+        }}>
+          <Calendar onChange={onChange} value={date} />
+        
+     
+    </Container>
+  );
+};
+export default ReactCalendar;
