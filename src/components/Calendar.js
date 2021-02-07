@@ -24,11 +24,12 @@ const ReactCalendar = () => {
     //       margin: "70px",
     //     }}
       
-        <Container flluid style={{
+        <Container fluid style={{
           
-          width: "100%",
+          width: "fit-content",
           height: "100%",
           display: "inline",
+          boxSizing: "content-box"
         
         }}>
           <Calendar onChange={onChange} value={date} />

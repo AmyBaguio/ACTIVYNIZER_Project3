@@ -49,7 +49,7 @@ function Dashboard() {
       <h1>Dashboard</h1>
       </div>
       <div>
-      <Card  border="primary" style={{ width: "30rem", display: "inline"}}>  
+      <Card  border="primary" style={{ width: "50rem",height: "40rem", display: "inline-block"}}>  
         {calendarState.map((item) => (  
           <ListGroup style={styles.event} variant="secondary"> 
             <ListGroup.Item>Todays Event: {item.happeningToday}</ListGroup.Item>

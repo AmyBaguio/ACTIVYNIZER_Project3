@@ -6,18 +6,13 @@ const styles = {
     background: "blue",
     padding: "2rem",
     fontFamily: "Impact",
-    fontSize: "1rem",
-    margin: "0",
-    
+     textAlign: "bottom",
+     fontSize: "1.5rem",
   },
   appName: {
-    fontSize: "3rem",
+    fontSize: "4rem",
     color: "white",
   },
-  sub: {
-    fontSize: "1.5rem",
-    color: "#f8f9fa",
-  }
 };
 
 function MyNavbar() {
@@ -29,7 +24,7 @@ function MyNavbar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav  style={styles.sub} className="mr-auto">
+          <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
             <Nav.Link href="/calendar">Calendar</Nav.Link>

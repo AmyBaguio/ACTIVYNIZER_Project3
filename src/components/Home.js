@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 
@@ -13,17 +13,6 @@ const useStyles = makeStyles((theme) => ({
   img: {
     width: "100%",
     height: "100%",
-  },
-  button1: {
-    marginTop: "20rem",
-    margin: "5px",
-    textAlign: "center",
-    flexDirection: "center",
-  },
-  button2: {
-    margin: "5px",
-    textAlign: "center",
-    flexDirection: "center",
   },
 }));
 
@@ -42,12 +31,29 @@ export default function Home() {
         </Grid>
         <Grid item xs={2}>
           <div>
-            <Button className={classes.button1} variant="primary" size="lg">
+            <Button
+              variant="contained"
+              justifyContent="center"
+              size="large"
+              color="Primary"
+              position="relative"
+              styles={{
+                fontSize: 30,
+              }}
+            >
               Sign In
             </Button>
           </div>
           <div>
-            <Button className={classes.button2} variant="warning" size="lg">
+            <Button
+              variant="contained"
+              size="large"
+              color="Secondary"
+              position="relative"
+              styles={{
+                fontSize: 30,
+              }}
+            >
               Sign Up
             </Button>
           </div>
