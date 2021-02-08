@@ -1,26 +1,36 @@
-import React, { useState } from "react";
-import { Card, Container, ListGroup } from "react-bootstrap";
 
-// import API from "../utils/API";
+import React from "react";
+import { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
 
-const styles = {
-  dashBoardStyle: {
-    color: "blue",
-    backgroundColor: "cyan",
-    fontFamily: "Impact",
-    textAlign: "center",
-   
+
+const useStyles = makeStyles({
+  root: {
+    
+    justifyContent: "center",
+    display: "flex",
+    height: "400px",
+    margin: "100px",
+    lineHeight: "2rem"
   },
-  event: {
-    fontFamily: "Arial",
-    justifyContent: "Center",
-  
-  }
-};
+  card: {
+    backgroundColor: "cyan",
+    
+    height: "100%",
+    width: "100%",
+    borderRadius: "20px",
+    color: "black",
+    margin: "10px",
+    padding: "10px"
+  },
+});
 
+export default function Dashboard() {
+  const classes = useStyles();
 
-
-function Dashboard() {
   const [calendarState, setDeveloperState] = useState([
     {
       happeningToday: "Vincent basketball game",
@@ -44,24 +54,29 @@ function Dashboard() {
     },
   ]);
   return (
-    <Container fluid style={styles.dashBoardStyle} className="Dashboard">
-      <div>
-      <h1>Dashboard</h1>
-      </div>
-      <div>
-      <Card  border="primary" style={{ width: "50rem",height: "40rem", display: "inline-block"}}>  
-        {calendarState.map((item) => (  
-          <ListGroup style={styles.event} variant="secondary"> 
-            <ListGroup.Item>Todays Event: {item.happeningToday}</ListGroup.Item>
-            <ListGroup.Item>Date: {item.date}</ListGroup.Item>
-            <ListGroup.Item>Time: {item.time}</ListGroup.Item>
-          </ListGroup>
-        ))}
-      </Card>
-      </div>
-      
-    </Container>
+   <div className="title" style={{
+     textAlign: "center",
+     fontFamily: "SansSerif"
+   }}>
+     <h1>DASHBOARD</h1>
+   
+    <div className={classes.root}>
+      {calendarState.map((item) => (
+        
+        <Card className={classes.card}>
+          <CardContent >
+            <Typography gutterBottom variant="h4" component="h2" justifyContent="center">
+              Todays Event: <br/> {item.happeningToday}
+            </Typography>
+            <Typography variant="h5" >
+              Date: {item.date}
+              <br />
+              Time: {item.time}
+            </Typography>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+    </div>
   );
 }
-
-export default Dashboard;
