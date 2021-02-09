@@ -7,8 +7,7 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "cyan",
-
+    backgroundColor: "blue",
     textAlign: "center",
   },
   img: {
@@ -18,19 +17,20 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     display: "flex-inline",
     margin: "2rem",
-    marginTop: "300px"
-  }
+    marginTop: "500px",
+    padding: "2rem",
+    backgroundColor: "yellow",
+  },
 }));
 
 export default function Home() {
   const classes = useStyles();
 
   return (
-  
     <div className={classes.root}>
       <Grid container spacing={2}>
         <Grid item xs={10}>
-          <Paper >
+          <Paper>
             <img
               className={classes.img}
               alt="complex"
@@ -41,24 +41,27 @@ export default function Home() {
         <Grid item xs={2}>
           <Paper className={classes.paper}>
             <div>
-              <Button 
-               variant="contained"
-               size="large"
-               color="primary"
-               position="relative"
-               marginBottom="5rem"
-               fullWidth={true}
-              >
-                Sign In
-              </Button>
-            </div>
-            <div>
               <Button
                 variant="contained"
                 size="large"
-                color="default"
+                color="primary"
                 position="relative"
-                fullWidth={true} 
+                marginBottom="5rem"
+                fullWidth={true}
+                borderRadius="2rem"
+                marginBottom="2rem"
+              >
+                Sign In
+              </Button>
+            
+              <Button
+                variant="contained"
+                size="large"
+                color="yellow"
+                position="relative"
+                fullWidth={true}
+                borderRadius="2rem"
+                marginTop="2rem"
               >
                 Sign Up
               </Button>

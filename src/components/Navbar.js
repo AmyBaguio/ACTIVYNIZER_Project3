@@ -3,15 +3,16 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 
 const styles = {
   navbarStyle: {
-    background: "blue",
+    background: "cyan",
     padding: "2rem",
-    fontFamily: "Impact",
-     textAlign: "bottom",
-     fontSize: "1.5rem",
+    fontSize: "2rem",
+    fontFamily: "SansSerif",
   },
   appName: {
-    fontSize: "4rem",
-    color: "white",
+    fontSize: "5rem",
+    color: "blue",
+    marginRight: "8rem",
+    fontFamily: "Impact",
   },
 };
 
@@ -23,7 +24,7 @@ function MyNavbar() {
           A c t i v y N i z e r
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse id="responsive-navbar-nav navbar-light">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/dashboard">Dashboard</Nav.Link>
