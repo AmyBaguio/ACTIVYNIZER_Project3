@@ -13,9 +13,12 @@ I can view ‘ALL” the family members activities, events and special occasion.
 * Node
 * React
 * Axios
-* Mongoose
+* MongoDB
+* Mongoose ORM
 * Material UI
 * Babel
+* Express
+* Passport
 
 
 ## Application Requirements
@@ -36,7 +39,7 @@ I can view ‘ALL” the family members activities, events and special occasion.
 
 <br>
 
-![App Screenshot](https://raw.githubusercontent.com/AmyBaguio/Updated-Portfolio2/master/Assets/ResponsivePortfolio%20.png)
+![App Screenshot](/public/image/Cover.png)
 
 <br>
 
