@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     width: "100%",
-    height: "100%",
+    height: "50%",
   },
   paper: {
    
@@ -46,7 +46,7 @@ export default function Home() {
           <Paper>
             <img
               className={styles.img}
-              alt="complex"
+              alt="diary"
               src="./image/logging.jpg"
             />
           </Paper>
