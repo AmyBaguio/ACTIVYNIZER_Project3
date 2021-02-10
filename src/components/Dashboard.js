@@ -4,13 +4,14 @@ import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "blue",
     height: "100%",
     width: "100%",
-    color: "white",
+    backgroundColor: "#0077c2"
+   
   },
   card: {
     marginTop: "15rem",
@@ -20,8 +21,11 @@ const useStyles = makeStyles({
     color: "black",
     margin: "20px",
     padding: "40px",
-    backgroundColor: "yellow",
+    backgroundColor: "#80d6ff"
   },
+  img: {
+    
+  }
 });
 
 export default function Dashboard() {
@@ -50,18 +54,18 @@ export default function Dashboard() {
     },
   ]);
   return (
+    
     <div className={classes.root}>
-      <h1
-        style={{
-          fontFamily: "uiSansSerif",
-          fontSize: "4rem",
-          marginBottom: "3rem",
-          marginLeft: "60rem",
-        }}
-      >
-        DASHBOARD
-      </h1>
-
+      <div className="center">
+        <h1
+          style={{
+            fontFamily: "uiSansSerif",
+            fontSize: "4rem",
+          }}
+        >
+          DASHBOARD
+        </h1>
+      </div>   
       <div
         className="cardArea"
         style={{
@@ -88,7 +92,7 @@ export default function Dashboard() {
             </CardContent>
           </Card>
         ))}
-      </div>
+    </div>
     </div>
   );
 }

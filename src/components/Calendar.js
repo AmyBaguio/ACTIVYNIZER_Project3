@@ -8,8 +8,9 @@ const useStyles = makeStyles({
   cal: {
     width: "1000px",
     height: "600px",
-    lineHeight: "5rem",
-    marginLeft: "650px",
+   
+    marginLeft: "850px",
+    backgroundColor: "#80d6ff" 
   },
 });
 
@@ -23,25 +24,26 @@ const ReactCalendar = () => {
 
   return (
     <div>
-      <h1
-        style={{
+      <div className="center"style={{
           fontFamily: "ui-sans-serif",
-          fontSize: "4rem",
           color: "black",
-          backgroundColor: "yellow",
-        }}
+          backgroundColor: "#0077c2"
+        }}>
+      <h1 className="calName" style={{
+         fontSize: "5rem",
+      }}
       >
         CALENDAR
       </h1>
+      </div>
 
       <Container
         fluid
         style={{
           textAlign: "center",
-          backgroundColor: "blue",
-          fontSize: "20px",
-          margin: "1rem",
+          fontSize: "30px",
           display: "flex",
+          backgroundColor: "#0077c2"
         }}
       >
         <Calendar className={classes.cal} onChange={onChange} value={date} />

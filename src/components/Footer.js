@@ -12,7 +12,7 @@ const styles = {
 function Footer() {
   return (
     <div style={styles.footerStyle} className="footer">
-      <div class="alert alert-primary" >
+      <div class="alert alert-dark" >
         &copy; *ACTIVYNIZER* Organising Family Events
       </div>
     </div>
