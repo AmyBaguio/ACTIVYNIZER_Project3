@@ -1,5 +1,7 @@
 import React from "react";
 
+import firebase from '../firebase'
+
 const styles = {
   footerStyle: {
     textAlign: "center",
@@ -10,12 +12,16 @@ const styles = {
 };
 
 function Footer() {
+  const [email, setEmail] = React.useState("not logged in.")
+  firebase.auth().onAuthStateChanged(() => {
+    setEmail(firebase.auth().currentUser?.email ?? "not logged in.")
+  })
   return (
     <div style={styles.footerStyle} className="footer">
       <div class="alert alert-dark" >
-        &copy; *ACTIVYNIZER* Organising Family Events
+        &copy; *ACTIVYNIZER* Organising Family Events. You are {email}
       </div>
-    </div>
+          </div>
   );
 }
 
