@@ -39,7 +39,7 @@ I can view ‘ALL” the family members activities, events and special occasion.
 
 <br>
 
-![App Screenshot](/public/image/Cover.png)
+![App Screenshot](/public/image/CoverPhoto.png)
 
 <br>
 
