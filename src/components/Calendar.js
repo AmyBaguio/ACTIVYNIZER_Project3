@@ -27,6 +27,7 @@ const ReactCalendar = () => {
       <div className="center"style={{
           fontFamily: "ui-sans-serif",
           color: "black",
+          
           backgroundColor: "#0077c2"
         }}>
       <h1 className="calName" style={{
