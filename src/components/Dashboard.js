@@ -33,24 +33,24 @@ export default function Dashboard() {
 
   const [calendarState, setDeveloperState] = useState([
     {
-      happeningToday: "Vincent's basketball game",
-      date: "Feb 3, 2021",
-      time: 1600,
+      happeningToday: "Vincent's basketball practice",
+      date: "Feb 13, 2021",
+      time: 800,
     },
     {
       happeningToday: "Prince Dentist Appointment",
-      date: "Feb 16, 2021",
+      date: "Feb 13, 2021",
       time: 1300,
     },
     {
-      happeningToday: "Vince Choir practice",
-      date: "Feb 23, 2021",
-      time: 1900,
+      happeningToday: "Amy's Catch up with CFC ladies",
+      date: "Feb 13, 2021",
+      time: 1600,
     },
     {
-      happeningToday: "Amy's Catch up with the ladies",
-      date: "Feb 10, 2021",
-      time: 1100,
+      happeningToday: "Vince Choir practice",
+      date: "Feb 13, 2021",
+      time: 1700,
     },
   ]);
   return (

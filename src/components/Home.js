@@ -13,10 +13,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     textAlign: "center",
     backgroundColor: "#0077c2",
+    
   },
   img: {
     width: "100%",
-    height: "50%",
+    flexBasis: "70%"
   },
   paper: {
     margin: "1rem",
@@ -26,12 +27,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#03a9f4",
   },
   buttonOne: {
-    background: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText,
-    margin: "15px",
+    
+    marginTop: "35px",
   },
   buttonTwo: {
-    margin: "15px",
+    marginTop: "15px",
   },
 }));
 
@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <div className={styles.root}>
       <Grid container spacing={2}>
-        <Grid item xs={10}>
+        <Grid item xs={10} style={{boxSizing: "border-box"}}>
           <Paper>
             <img className={styles.img} alt="diary" src="./image/logging.jpg" />
           </Paper>
@@ -95,6 +95,7 @@ export default function Home() {
                 id="text-email"
                 label="email"
                 variant="filled"
+                backgroundColor="white"
                 type="email"
                 inputRef={emailRef}
               />
@@ -113,6 +114,7 @@ export default function Home() {
                 variant="contained"
                 size="large"
                 color="primary"
+
                 fullWidth={true}
                 onClick={handleSignIn}
               >
