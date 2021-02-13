@@ -15,10 +15,9 @@ I can view ‘ALL” the family members activities, events and special occasion.
 * Axios
 * MongoDB
 * Mongoose ORM
-* Material UI
-* Babel
 * Express
-* Passport
+* Material UI
+* Firebase
 
 
 ## Application Requirements
